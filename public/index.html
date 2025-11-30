@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LinguaFlow - AI Language Partner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>LinguaFlow</h1>
+            <div class="settings">
+                <select id="native-lang">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="ja">Japanese</option>
+                    <option value="zh-TW">Traditional Chinese</option>
+                    <option value="yue">Cantonese</option>
+                </select>
+                <span>learning</span>
+                <select id="target-lang">
+                    <option value="en">English</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                    <option value="ja">Japanese</option>
+                    <option value="zh-TW">Traditional Chinese</option>
+                    <option value="yue">Cantonese</option>
+                </select>
+                <button id="save-settings">Update</button>
+            </div>
+        </header>
+
+        <main>
+            <div class="chat-area">
+                <div id="chat-history" class="chat-history">
+                    <div class="message system">
+                        Welcome! Select your languages and click "Start Scenario" to begin.
+                    </div>
+                </div>
+                <div class="input-area">
+                    <input type="text" id="user-input" placeholder="Type your message..." autocomplete="off">
+                    <button id="send-btn">Send</button>
+                    <button id="mic-btn">🎤</button>
+                </div>
+            </div>
+
+            <div class="sidebar">
+                <div class="panel scenario-panel">
+                    <h3>Current Scenario</h3>
+                    <div id="scenario-content">None selected.</div>
+                    <button id="new-scenario-btn">Start New Scenario</button>
+                </div>
+
+                <div class="panel feedback-panel">
+                    <h3>Grammar Coach</h3>
+                    <div id="grammar-feedback" class="feedback-content">
+                        Waiting for input...
+                    </div>
+                </div>
+
+                <div class="panel culture-panel">
+                    <h3>Cultural Advisor</h3>
+                    <div id="culture-feedback" class="feedback-content">
+                        Waiting for context...
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
