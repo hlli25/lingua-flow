@@ -1,6 +1,6 @@
 # Lingua Flow - AI Conversation Partner
 
-A multi-agent language learning application built for the Google AI Agents Course Capstone.
+A multi-agent language learning application.
 
 ## Features
 
@@ -85,7 +85,7 @@ graph TD
     end
     
     subgraph "LLM Layer"
-        Conversation -->|Prompt| Gemini[Google Gemini 2.0 Flash]
+        Conversation -->|Prompt| Gemini[Google Gemini 2.5 Flash Lite]
         Grammar -->|Prompt| Gemini
         Culture -->|Prompt| Gemini
         Scenario -->|Prompt| Gemini
