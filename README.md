@@ -99,7 +99,7 @@ graph TD
 
 ### Tech Stack
 - **Backend**: Node.js + Express + TypeScript
-- **AI**: Google Gemini 2.0 Flash via `@google/generative-ai`
+- **AI**: Google Gemini 2.5 Flash Lite via `@google/generative-ai`
 - **Frontend**: Vanilla HTML/CSS/JS (Responsive Design)
 - **Speech**: Web Speech API (Browser Native)
 

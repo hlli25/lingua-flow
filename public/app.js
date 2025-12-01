@@ -53,6 +53,8 @@ async function sendMessage() {
 
 async function generateScenario() {
     chatHistory.innerHTML = ''; // Clear previous chat
+    document.getElementById('grammar-feedback').innerText = "Waiting for input...";
+    document.getElementById('culture-feedback').innerText = "Waiting for context...";
     document.getElementById('scenario-content').innerText = "Generating scenario...";
     try {
         const res = await fetch('/api/scenario', { method: 'POST' });
