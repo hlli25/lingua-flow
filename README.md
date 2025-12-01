@@ -16,34 +16,33 @@ A multi-agent language learning application.
 
 ## Prerequisites
 
-- Node.js (v18+)
+- Python 3.10+
 - Google Gemini API Key
 
 ## Setup
 
 1.  Clone the repository (or navigate to the directory).
-2.  Install dependencies:
+2.  Create a virtual environment (optional but recommended):
     ```bash
-    npm install
+    python -m venv .venv
+    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
     ```
-3.  Create a `.env` file in the root directory and add your API Key:
+3.  Install dependencies:
+    ```bash
+    pip install -r requirements.txt
+    ```
+4.  Create a `.env` file in the root directory and add your API Key:
     ```env
     GEMINI_API_KEY=your_api_key_here
-    PORT=3000
     ```
 
 ## Running the Application
 
-1.  **Development Mode**:
+1.  Start the Flask server:
     ```bash
-    npm run dev
+    python app.py
     ```
-2.  **Production Build**:
-    ```bash
-    npm run build
-    npm start
-    ```
-3.  Open your browser to `http://localhost:3000`.
+2.  Open your browser to `http://localhost:3000`.
 
 ## Usage
 
@@ -75,7 +74,7 @@ The application follows a modular multi-agent architecture:
 
 ```mermaid
 graph TD
-    User[User Client] <-->|JSON/HTTP| Server[Express Server]
+    User[User Client] <-->|JSON/HTTP| Server[Flask Server]
     
     subgraph "Agent Orchestration"
         Server -->|1. Context| Conversation[Conversation Agent]
@@ -98,8 +97,8 @@ graph TD
 ```
 
 ### Tech Stack
-- **Backend**: Node.js + Express + TypeScript
-- **AI**: Google Gemini 2.5 Flash Lite via `@google/generative-ai`
+- **Backend**: Python + Flask
+- **AI**: Google Gemini 2.5 Flash Lite via `google-generativeai`
 - **Frontend**: Vanilla HTML/CSS/JS (Responsive Design)
 - **Speech**: Web Speech API (Browser Native)
 
