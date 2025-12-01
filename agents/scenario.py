@@ -13,6 +13,6 @@ class ScenarioAgent(Agent):
         Output format:
         SCENARIO_NATIVE: [Description in {profile['nativeLanguage']}]
         SCENARIO_TARGET: [Description in {profile['targetLanguage']}]
-        OPENING_LINE: [First line of dialogue in {profile['targetLanguage']}]
+        OPENING_LINE: [First line of dialogue in {profile['targetLanguage']} spoken by the PARTNER. If the scenario implies the USER should speak first (e.g., approaching a stranger), leave this empty.]
         """
         return self.generate_text(prompt)
